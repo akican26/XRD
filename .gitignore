@@ -1,0 +1,9 @@
+data/
+xrd.aux
+xrd.dvi
+xrd.fdb_latexmk
+xrd.fls
+xrd.lof
+xrd.log
+xrd.synctex.gz
+xrd.toc

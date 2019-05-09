@@ -1,0 +1,70 @@
+\documentclass[11pt]{jsarticle}%書体
+\usepackage{ascmac}
+\usepackage{amsmath}%数式
+\usepackage[dvipdfmx]{graphics}%画像
+\usepackage{upgreek}%ギリシャ文字立体
+%\usepackage{name}
+
+\title{タイトル}%タイトル
+\author{著者}%著者
+\date{日付}%日付
+
+\begin{document}%本文はじめ
+\maketitle%タイトル
+\tableofcontents%目次
+\listoffigures%図目次
+
+\section{name}%セクション
+
+\subsection{name}%サブセクション
+
+\subsubsection{name}%サブサブセクション
+
+\begin{figure}[h]%画像はじめ[ページ上部]
+ \centering%中心揃え.
+ %\includegraphics[clip,width=9cm]{figure}%[切り取り、サイズ指定]ファイル名
+ \caption{caption.}%グラフタイトル.
+ \label{label}%グラフ識別子
+\end{figure}%画像おわり
+
+\begin{equation}%数式はじめ
+ \Delta E=\frac{\mathrm{\hbar}^{2}\uppi^{2}}{2mL^{2}}%\frac{a}{b}->a/b
+ \label{eq_qw}%式識別子
+\end{equation}%数式おわり
+
+\begin{table}[ht]%表はじめ
+ \centering
+ \caption{実験1の実験条件.}
+ \begin{tabular}{lc}\hline
+  \multicolumn{2}{c}{実験条件} \\ \hline
+  中心波長 & 435 nm            \\
+  露光時間 & 0.1 秒            \\
+  積算回数 & 1 回              \\
+  試料温度 & 19 C    \\ \hline
+ \end{tabular}
+ \label{col_1}%識別子
+\end{table}%表おわり
+
+\begin{figure}[ht]%画像はじめ
+ \centering%中央揃え
+ \begin{tabular}{c}%横ならべ
+  %1
+  \begin{minipage}{0.5\hsize}%占有割合指定
+   \centering
+   %\includegraphics[clip, width=4.5cm,height=3cm]{figure}
+   \hspace{1.6cm} [1]サブタイトル%サブタイトル1
+  \end{minipage}
+
+  %2
+  \begin{minipage}{0.33\hsize}
+   \centering
+   %\includegraphics[clip, width=4.5cm]{figure}
+   \hspace{1.6cm} [2]サブタイトル%サブタイトル2
+  \end{minipage}
+ \end{tabular}%画像ならべおわり
+ \caption{caption.}%グラフタイトル
+ \label{label}%識別子
+
+\end{figure}
+
+\end{document}%本文おわり
