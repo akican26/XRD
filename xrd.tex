@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{upgreek}
+\usepackage{ulem}
 
 \newsavebox{\circlebox}
 \savebox{\circlebox}{\fontencoding{OMS}\selectfont\Large\char13}
@@ -16,8 +17,8 @@
 }	%丸数字(文字)環境。\centercircle{入れたい文字} で丸文字を表示する。
 
 
-\title{宮島研究室2019年度B4スタート実験}
-\author{東京理科大学 応用物理学科 宮島研究室B4 渡辺慧}
+\title{宮島研究室2019年度B4 XRD実験}
+\author{東京理科大学 理学部 応用物理学科\\宮島研究室B4 渡辺慧}
 \date{\today}
 
 
@@ -44,9 +45,40 @@
 なんとか
 
 \section{原理}
-\subsection{X線回折}
-\subsection{回折条件}
-\subsection{逆格子空間}
+\subsection{X線回折}%ここいる？
+X線は電磁波であり、結晶にＸ線を入射したとき、X線は構成原子の原子核と電子によって散乱される。荷電粒子による電磁波の散乱には、散乱波の波長が元の波長から変化しないThomson散乱と、散乱はの波長が元の波長よりも長くなるCompton散乱の2種類がある。Thomson散乱は干渉性散乱、Compton散乱は非干渉性散乱である。結晶による回折においては、干渉性散乱のみを考えればよいので、Thomson散乱のみを考える。Thomson散乱において、散乱断面積は散乱体の質量の自乗に反比例するため、X線は電子により散乱される。
+
+\subsection{結晶面}
+
+
+
+%回折条件
+X線の回折の条件を考える。X線がある結晶面によって散乱を起こすときの光路を図\ref{dsinq}に示す。入射光と結晶面の角度を$\theta$、結晶面の間隔を$d$としたとき、この時、2つの光の光路差は$2d\sin\theta$である。散乱前後で光の波長が変化しないとき、この光路差がX線の波長の整数倍であれば、散乱光は強め合う。よって、X線の回折の条件は
+\begin{equation}
+  2d\sin\theta=n\lambda
+  \label{bragg}
+\end{equation}
+となる。この条件をBragg条件と呼ぶ。
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[clip,width=8cm]{dsinq.eps}
+ \caption{X線の散乱光路.}
+ \label{dsinq}
+\end{figure}
+
+\newpage
+\subsection{NaClの結晶構造}
+NaCl結晶は。、NaCl型構造をとる。NaClの構造の概形を図\ref{nacl}に示す。
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[clip,width=8cm]{nacl.eps}
+ \caption{NaClの結晶構造.}
+ \label{nacl}
+\end{figure}
+
+\newpage
 \subsection{NaCl粉末の回折パターン}
 
 $2\theta$の値が90よりも小さいときの、NaCl粉末の回折パターンを表\ref{data}に示す。実験データの解析のおいては、この表のデータを参照する。
@@ -84,7 +116,7 @@ NaCl粉末及び単結晶の回折パターンを、X線回折装置"SmartLab"�
  \label{smartlab}
 \end{figure}
 
-X線源から放射された光をNaCl粉末及び単結晶に照射し、光検出器で回折光を観測した。X線源から等方的に放射された光を、放物面人工多層膜ミラーを用いて単色化・平行化し、2枚の入射スリットとソーラースリットを用いて発散を制限した。2枚の出射スリットとソーラースリットを用いて、試料からの回折光の発散を制限した。アッテネーターを用いて、光検出器に入射する光を減衰させた。PSA(平行スリットアナライザー)を用いて分解能を決定した。$2\theta$は入射光と出射光のなす角である。表\ref{exp}の実験条件の下試料ごとに$2\theta$を変えてゆき、回折パターンを測定した。試料はNaCl粉末とNaCl単結晶の2種類である。NaCl単結晶の寸法を図\ref{size}に示す。
+X線源から放射された光をNaCl粉末及び単結晶に照射し、光検出器で回折光を観測した。X線源から等方的に放射された光を、放物面人工多層膜ミラーを用いて単色化・平行化し、2枚の入射スリットとソーラースリットを用いて発散を制限した。2枚の出射スリットとソーラースリットを用いて、試料からの回折光の発散を制限した。アッテネーターを用いて、光検出器に入射する光を減衰させた。PSA(平行スリットアナライザー)を用いて分解能を決定した。$2\theta$は入射光と出射光のなす角である。表\ref{exp}の実験条件の下試料ごとに$2\theta$を変えてゆき、回折パターンを測定した。試料はNaCl粉末とNaCl単結晶の2種類である。単結晶試料の寸法を図\ref{size}に示す。
 
 \begin{table}[ht]
  \centering
@@ -106,8 +138,9 @@ X線源から放射された光をNaCl粉末及び単結晶に照射し、光検
  \label{size}
 \end{figure}
 
+
 \newpage
-縦3.2 mm、横5.2 mm、高さ1.1 mmの結晶を、最も面積の広い面を下にして試料台に設置した。
+実験に用いた単結晶は、縦3.2 mm、横5.2 mm、高さ1.1 mmの直方体のものである。この結晶を、最も面積の広い面を下にして試料台に設置した。
 
 \newpage
 \section{NaCl粉末及び単結晶の回折パターンの解析}
@@ -166,6 +199,8 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
 \newpage
 \subsection{NaCl単結晶}
 
+
+
 図\ref{bulk}に示す。
 
 \begin{figure}[htb]
@@ -175,23 +210,40 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
  \label{bulk}
 \end{figure}
 
-横軸はAの回転角、縦軸は回折強度である。グラフから、鋭いピークが複数見られる。$2\theta/\theta$法を用いた単結晶のX線回折測定では、[001]面に平行な面での回折しか観測できない。そこで、(h,k,l)=(0,0,2n)となるように回折指数をとり、粉末試料で得た格子定数に近い計算結果が得られるよう、逆算をして$2\theta$を定めた。その結果を表\ref{crystal}に示す。
+横軸はAの回転角、縦軸は回折強度である。グラフから、鋭いピークが複数見られるが、どのピークが、どのX線による回折を示しているのか判断ができない。そこで、$2\theta/\theta$法を用いた単結晶のX線回折測定では、(001)面に平行な面での回折しか観測できないことを利用し、(h,k,l)=(0,0,2n)となるように回折指数をとり、粉末試料で得た格子定数に近い計算結果が得られるよう、$2\theta$を逆算した。その結果を表\ref{gyakusan}に示す。
+
+\begin{table}[htbp]
+\begin{center}
+\caption{2$\theta$の見積もり.}
+\begin{tabular}{|c|c|c|c|c|}\hline
+$a$ & $\lambda$ & l & $\theta$[rad] & 2$\theta$[deg]\\  \hline  \hline
+5.73674607 & 1.39 & 2 & 0.244733355 & 28.04437672\\
+5.73674607 & 1.54 & 2 & 0.271778272 & 31.14349589\\
+5.73674607 & 1.39 & 4 & 0.505900419 & 57.97191777\\
+5.73674607 & 1.54 & 4 & 0.566746084 & 64.94431732\\ \hline
+\end{tabular}
+\label{gyakusan}
+\end{center}
+\end{table}
+
+\newpage
+この表から、$K_\alpha$線及び$K_\beta$線由来の、(0,0,2n)面による回折角が見積もれた。図\ref{bulk}のピークのうち、頂点における2$\theta$が、表\ref{gyakusan}に近いものだけを抜き出したものを表\ref{crystal}に示す。
 
 \begin{table}[htbp]
  \begin{center}
   \caption{NaCl単結晶の格子定数.}
   \begin{tabular}{|c|c|c|c|ccc|c|c|c|}  \hline
-   $2\theta[\mathrm{deg}]$ & $2\theta[\mathrm{rad}]$ & $G_{m\beta}$ & $G_{m\alpha}$ & h & k & l & $a_\beta$   & $a_\alpha$  & $a$         \\   \hline  \hline
-   28.598                  & 0.490932333             & 2.195818211  & 1.982945083   & 0 & 0 & 2 & 5.71996349  & 6.334013034 & 5.71996349  \\
-   31.739                  & 0.544852833             & 2.431301177  & 2.195599203   & 0 & 0 & 2 & 5.165958095 & 5.72053405  & 5.72053405  \\
-   59.173                  & 1.015803167             & 4.394597543  & 3.968564221   & 0 & 0 & 4 & 5.716109326 & 6.329745117 & 5.716109326 \\
-   66.28                   & 1.137806667             & 4.867753959  & 4.395850588   & 0 & 0 & 4 & 5.160490899 & 5.714479939 & 5.714479939 \\  \hline
+   $2\theta[\mathrm{deg}]$ & $2\theta[\mathrm{rad}]$ & $G_{m\beta}$ & $G_{m\alpha}$ & h & k & l & $a_\beta$   & $a_\alpha$        \\   \hline  \hline
+   28.598                  & 0.490932333             & 2.195818211  & 1.982945083   & 0 & 0 & 2 & 5.71996349  & \sout{6.334013034}  \\
+   31.739                  & 0.544852833             & 2.431301177  & 2.195599203   & 0 & 0 & 2 & \sout{5.165958095} & 5.72053405 \\
+   59.173                  & 1.015803167             & 4.394597543  & 3.968564221   & 0 & 0 & 4 & 5.716109326 & \sout{6.329745117} \\
+   66.28                   & 1.137806667             & 4.867753959  & 4.395850588   & 0 & 0 & 4 & \sout{5.160490899} & 5.714479939 \\  \hline
   \end{tabular}
   \label{crystal}
  \end{center}
 \end{table}
 
-この逆算から、特性X線$K_\alpha$と$K_\beta$による1次と2次の回折角が得られた。それを図\ref{kakb}に示す。
+単結晶においては、(001)面に平行な面での回折のみが見られることから、$K_\beta$線による回折も観測できる。そのため、各回折指数hklにおいて、2つの格子定数が計算できる。この逆算から、特性X線$K_\alpha$と$K_\beta$による1次と2次の回折角が得られた。それを図\ref{kakb}に示す。
 
 \begin{figure}[htb]
  \centering
@@ -202,7 +254,7 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
 
 \newpage
 
-ブラッグの回折条件より、$2d\sin\theta=n\lambda$である。よって、表\ref{kakb}の値から、[001]方向の面間隔を計算できる。計算結果を表\ref{d}に示す。
+ブラッグの回折条件より、$2d\sin\theta=n\lambda$である。よって、表\ref{kakb}の値から、[001]方向の面間隔を計算できる。計算結果を表\ref{d}に示す。%ここいる？
 
 \begin{table}[htbp]
  \begin{center}
