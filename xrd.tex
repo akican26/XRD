@@ -44,9 +44,8 @@
 
 \newpage
 \section{本研究の目的}
-なんとか
+本研究の目的は、X線回折装置によって、Nacl結晶のX線回折パターンを測定し、格子定数の導出を行うことである。
 
-\newpage
 \section{原理}
 
 \subsection{結晶面}
@@ -133,34 +132,43 @@ $l=0$のときの、実格子空間と逆格子空間の簡単な対応を図\re
 
 \newpage
 \subsection{回折条件}
-実格子空間でのX線の回折の条件を考える。X線がある結晶面によって散乱を起こすときの光路を図\ref{dsinq}に示す。入射光と結晶面の角度を$\theta$、結晶面の間隔を$d$としたとき、この時、2つの光の光路差は$2d\sin\theta$である。散乱前後で光の波長が変化しないとき、この光路差がX線の波長の整数倍であれば、散乱光は強め合う。よって、実格子空間におけるX線の回折の条件は
+実格子空間でのX線の回折の条件を考える。X線がある結晶面によって散乱を起こすときの光路を図\ref{hasuu}(a)に示す。入射光と結晶面の角度を$\theta$、結晶面の間隔を$d$としたとき、この時、2つの光の光路差は$2d\sin\theta$である。散乱前後で光の波長が変化しないとき、この光路差がX線の波長の整数倍であれば、散乱光は強め合う。よって、実格子空間におけるX線の回折の条件は
 \begin{equation}
  2d\sin\theta=n\lambda
  \label{bragg}
 \end{equation}
 となる。この条件をBragg条件と呼ぶ。
 
-\begin{figure}[htb]
- \centering
- \includegraphics[clip,width=5cm]{dsinq.eps}
- \caption{実格子空間におけるX線の散乱.}
- \label{dsinq}
-\end{figure}
 
-また、逆格子空間でのX線の回折の条件を考える。入射X線の波数ベクトルを$\bm{k_0}$、散乱X線の波数ベクトルを$\bm{k}$とする。逆格子空間におけるX線の散乱を図\ref{hasuu}に示す。
+また、逆格子空間でのX線の回折の条件を考える。入射X線の波数ベクトルを$\bm{k_0}$、散乱X線の波数ベクトルを$\bm{k}$とする。逆格子空間におけるX線の散乱を図\ref{hasuu}(b)に示す。
 $\bm{k_0}$が逆格子空間の原点を向くベクトルだと考えると、$\bm{k}$の終着点は$\bm{k_0-k}$で表せる(これを散乱ベクトルと呼ぶ)。ここで、散乱ベクトルが逆格子ベクトル$\bm{G}_{hkl}$と等しいとき、つまり、散乱X線の波数ベクトルの終点が逆格子空間の格子点に等しいとき、回折が起きる。したがって、逆格子空間におけるX線の回折の条件は、
 \begin{equation}
  \bm{k-k_0}=\bm{G}_{hkl}
  \label{laue}
 \end{equation}
 となる。この条件をLaue条件と呼ぶ。
-
-\begin{figure}[htb]
+\begin{figure}[ht]
  \centering
- \includegraphics[clip,width=6cm]{hasuu.eps}
- \caption{逆格子空間におけるX線の散乱.}
+ \begin{tabular}{c}
+
+  \begin{minipage}{0.5\hsize}
+   \centering
+   \includegraphics[clip, width=4.5cm]{dsinq.eps}
+   \hspace{2cm} (a)
+  \end{minipage}
+
+  \begin{minipage}{0.5\hsize}
+   \centering
+   \includegraphics[clip, width=6cm]{hasuu.eps}
+   \hspace{2cm} (b)
+  \end{minipage}
+
+ \end{tabular}
+ \caption{X線の散乱.}
  \label{hasuu}
+
 \end{figure}
+
 
 \if0
 \newpage%ここいる？
@@ -217,8 +225,21 @@ X線は電磁波であり、結晶にＸ線を入射したとき、X線は構成
   &=\sum_{\bm{R}}e^{i\bm{K\cdot R}}\sum_jf_je^{i\bm{K}\cdot\bm{r}_j}
 \end{split}
 \end{equation}
-となる。式(\ref{insi})より、$\int\rho_j(\bm{r-R-}\bm{r}_j)e^{i\bm{K\cdot (\bm{r-R-}\bm{r}_j)}}=f_j$とした。結晶全体の散乱の和を$\sum_{\bm{R}}e^{i\bm{K\cdot R}}\equiv G(\bm{K})$、単位格子中の散乱の和を$\sum_jf_je^{i\bm{K}\cdot\bm{r}_j}\equiv F(\bm{K})$と定義する。
-$G(\bm{K})$はLaue関数と呼ばれ、Laueの回折条件を満たすとき有限の値をとり、それ以外の場合はほぼ0である。一例として、あああああああ(教科書写す)
+となる。式(\ref{insi})より、$\int\rho_j(\bm{r-R-}\bm{r}_j)e^{i\bm{K\cdot (\bm{r-R-}\bm{r}_j)}}=f_j$とした。結晶全体の散乱の和を$\sum_{\bm{R}}e^{i\bm{K\cdot R}}\equiv G(\bm{K})$、単位格子中の散乱の和を$\sum_jf_je^{i\bm{K}\cdot\bm{r}_j}\equiv F(\bm{K})$と定義する。この時、散乱X線の強度は
+\begin{equation}
+  {|f|}^2={|G\bm{(K)}|^2}{|F|\bm{(K)}|}
+  \label{kyoudo}
+\end{equation}に比例する。
+$\bm{a_1}、\bm{a_2}、\bm{a_3}$方向の格子数を$N_a、N_b、N_c$としたとき、等比級数として計算できる。$|G(\bm{K})|^2$は、
+\begin{equation}
+  |G(\bm{K})|^2=\frac{\sin^2(N_a\bm{K}\cdot\bm{a}_1/2)}{\sin^2(\bm{K}\cdot\bm{a}_1/2)}\frac{\sin^2(N_b\bm{K}\cdot\bm{a}_2/2)}{\sin^2(\bm{K}\cdot\bm{a}_2/2)}\frac{\sin^2(N_c\bm{K}\cdot\bm{a}_3/2)}{\sin^2(\bm{K}\cdot\bm{a}_3/2)}
+\end{equation}
+と表せる。これをLaue関数と呼ぶ。$|G(\bm{K})|^2$は、波数ベクトル$\bm{K}$と各方向成分$\bm{a_1}、\bm{a_2}、\bm{a_3}$の内積が
+\begin{equation}
+  \bm{K}\cdot\bm{a}_1=2\pi h、\bm{K}\cdot\bm{a}_2=2\pi k、\bm{K}\cdot\bm{a}_3=2\pi l、
+\end{equation}
+のとき有限の値をとり、それ以外の場合はほぼ0である。%余力あれば例を示す
+
 $G(\bm{K})$がLaue関数であることから、$F(\bm{K})$について、$\bm{K}=\bm{G}_{hkl}$として計算できる。よって、
 \begin{equation}
 \begin{split}
@@ -230,26 +251,89 @@ $G(\bm{K})$がLaue関数であることから、$F(\bm{K})$について、$\bm{K
 
 \newpage
 \subsection{NaClの結晶構造}
-NaCl結晶は。、NaCl型構造をとる。NaClの構造の概形を図\ref{nacl}に示す。
+NaCl結晶は、NaCl型構造をとる。NaClの構造の概形を図\ref{nacl}に示す。
 
 \begin{figure}[htb]
  \centering
- \includegraphics[clip,width=8cm]{nacl.eps}
+ \includegraphics[clip,width=7cm]{nacl.eps}
  \caption{NaClの結晶構造.}
  \label{nacl}
 \end{figure}
 
-すこし消滅則の話
+NaCl結晶は、Naサイトの面心立方格子とClサイトの面心立方格子が入れ子になった構造になっている。NaCl結晶における結晶構造因子$F_{hkl}$を考える。
+単位格子において、橙の矢印のように単位ベクトル$\bm{a}_i(i=1,2,3)$($|a_1|=|a_2|=|a_3|$)の原点をとると、$\mathrm{Na}$原子は
+\begin{equation}
+  \bm{r}_1=0,\bm{r}_2=\frac{1}{2}\bm{a}_1+\frac{1}{2}\bm{a}_2,\bm{r}_3=\frac{1}{2}\bm{a}_2+\frac{1}{2}\bm{a}_3,\bm{r}_4=\frac{1}{2}\bm{a}_3+\frac{1}{2}\bm{a}_1
+\end{equation}
+の4つの非等価な位置に存在している。よって、$\mathrm{Na}$原子による原子散乱因子を$f_{\mathrm{Na}}$とすると、$F_{\mathrm{Na}}$は
+\begin{equation}
+  \begin{split}
+  F_{\mathrm{Na}}&=\sum_{j=1}^4f_{\mathrm{Na}}e^{i\bm{G}_{hkl}\cdot\bm{r}_j}\\
+  &=f_{\mathrm{Na}}(1+e^{i\pi(h+k)}+e^{i\pi(k+l)}+e^{i\pi(l+h)})
+\end{split}
+\end{equation}
+となる。$\mathrm{Cl}$原子においては、青の矢印のように$\bm{r}=\frac{1}{2}\bm{a}_1+\frac{1}{2}\bm{a}_2+\frac{1}{2}\bm{a}_3$の位置から考える。Cl原子原子による原子散乱因子を$f_{\mathrm{Cl}}$とすると、$F_{\mathrm{Cl}}$は
+\if0%Clの原子位置
+\begin{equation}
+  \begin{split}
+  \bm{r}_1=\frac{1}{2}\bm{a}_1+\frac{1}{2}\bm{a}_2+\frac{1}{2}\bm{a}_3\\
+  \bm{r}_2=\bm{a}_1+\bm{a}_2+\frac{1}{2}\bm{a}_3\\
+  \bm{r}_3=\frac{1}{2}\bm{a}_1+\bm{a}_2+\bm{a}_3\\
+  \bm{r}_4=\bm{a}_1+\frac{1}{2}\bm{a}_2+\bm{a}_3
+\end{split}
+\end{equation}
+\fi
 
+\begin{equation}
+  F_{\mathrm{Cl}}=f_{\mathrm{Cl}}\cdot e^{i\pi(h+k+l)}(1+e^{i\pi(h+k)}+e^{i\pi(k+l)}+e^{i\pi(l+h)})
+\end{equation}
+となる。NaCl結晶における結晶構造因子は、$F_{\mathrm{Na}}$と$F_{\mathrm{Cl}}$の合計なので、$F_{\mathrm{hkl}}$は
+\begin{equation}
+  F_{\mathrm{hkl}}=(f_{\mathrm{Na}}+f_{\mathrm{Cl}}\cdot e^{i\pi(h+k+l)})(1+e^{i\pi(h+k)}+e^{i\pi(k+l)}+e^{i\pi(l+h)})
+\end{equation}
+となる。NaCl結晶における$F_{\mathrm{hkl}}$の消滅則は、$hkl$の組み合わせから、
+\begin{subequations}
+\begin{equation}
+F_{hkl}=\begin{cases}
+4(f_{\mathrm{Na}}+f_{\mathrm{Cl}}) & h,k,lがすべて偶数 \\
+4(f_{\mathrm{Na}}-f_{\mathrm{Cl}}) & h,k,lがすべて奇数\\
+0 & その他
+\end{cases}
+\end{equation}
+\end{subequations}
+となる。
 \newpage
 \subsection{$2\theta/\theta$法}
 
-単結晶の時は(002)、粉末の場合はいろんな面がーーってのを書く。
+X線回折装置の概略図を図\ref{thetatheta}に示す。試料台に平行な結晶面と入射X線のなす角(入射角)が$\theta$のとき、試料に平行な結晶面と散乱X線のなす角も$\theta$となる。$\theta$の値を変える時、つまりX線源を動かす時、回折光が観測できるように光検出器も同時に動かす観測方法を$2\theta/\theta$法と呼ぶ。試料が単結晶の場合は、図\ref{thetatheta}(a)のように、試料台に平行な面は$(h,k,l)=(0,0,n)$の面のみであるため、Laue条件と消滅則を満たす$(0,0,n)$面からの回折のみが観測できる。試料が粉末の場合は、図\ref{thetatheta}(b)のように、$(h,k,l)=(0,0,n)$以外にも試料台に平行な面があるため、Laue条件と消滅則を満たせば、様々な$(h,k,l)$からの回折が観測できる。
+
+
+\begin{figure}[ht]
+ \centering
+ \begin{tabular}{c}
+
+  \begin{minipage}{0.5\hsize}
+   \centering
+   \includegraphics[clip, width=5.3cm]{2theta.eps}
+   \hspace{2cm} (a)
+  \end{minipage}
+
+  \begin{minipage}{0.5\hsize}
+   \centering
+   \includegraphics[clip, width=6cm]{2theta3.eps}
+   \hspace{2cm} (b)
+  \end{minipage}
+
+ \end{tabular}
+ \caption{X線回折装置概略図.}
+ \label{thetatheta}
+
+\end{figure}
 
 \newpage
 \subsection{NaCl粉末の回折パターン}
 
-$2\theta$の値が90よりも小さいときの、NaCl粉末の回折パターンを表\ref{data}に示す。実験データの解析のおいては、この表のデータを参照する。
+NaCl粉末の、$2\theta$の値が90よりも小さいときの回折パターンを表\ref{data}に示す。この表は、入射光と回折光のなす角が$2\theta$の時、$(h,k,l)$面が試料台に平行で、どの程度の強度で回折光が観測できるかを示している。また、$(h,k,l)$面における面間隔も示している。実験データの解析のおいては、この表のデータを参照する。
 
 \begin{table}[htbp]
  \begin{center}
@@ -275,7 +359,8 @@ $2\theta$の値が90よりも小さいときの、NaCl粉末の回折パター�
 \newpage
 \section{NaCl粉末及び単結晶の回折パターンの観測方法}
 
-NaCl粉末及び単結晶の回折パターンを、X線回折装置"SmartLab"を用いて観測した。$\mathrm{SmartLab}$の構造を図\ref{smartlab}に示す。
+NaCl粉末及び単結晶の回折パターンを、X線回折装置"SmartLab"を用いて、$2\theta/\theta$法で観測した。$\mathrm{SmartLab}$の構造を図\ref{smartlab}に示す。
+
 
 \begin{figure}[htb]
  \centering
@@ -284,7 +369,7 @@ NaCl粉末及び単結晶の回折パターンを、X線回折装置"SmartLab"�
  \label{smartlab}
 \end{figure}
 
-X線源から放射された光をNaCl粉末及び単結晶に照射し、光検出器で回折光を観測した。X線源から等方的に放射された光を、放物面人工多層膜ミラーを用いて単色化・平行化し、2枚の入射スリットとソーラースリットを用いて発散を制限した。2枚の出射スリットとソーラースリットを用いて、試料からの回折光の発散を制限した。アッテネーターを用いて、光検出器に入射する光を減衰させた。PSA(平行スリットアナライザー)を用いて分解能を決定した。$2\theta$は入射光と出射光のなす角である。表\ref{exp}の実験条件の下、試料ごとに$2\theta$を変えてゆき、回折パターンを測定した。試料はNaCl粉末とNaCl単結晶の2種類である。単結晶試料の寸法を図\ref{size}に示す。
+X線源から放射された光をNaCl粉末及び単結晶に照射し、光検出器で回折光を観測した。X線源のターゲット金属はCuである。特性X線のうち、波長が1.543 \AA の$K_\alpha$線と、1.392 \AA の$K_\beta$線を用いた。X線源から等方的に放射された光を、放物面人工多層膜ミラーを用いて単色化・平行化し、2枚の入射スリットとソーラースリットを用いて発散を制限した。2枚の出射スリットとソーラースリットを用いて、試料からの回折光の発散を制限した。アッテネーターを用いて、光検出器に入射する光を減衰させた。PSA(平行スリットアナライザー)を用いて分解能を決定した。$2\theta$は入射光と出射光のなす角である。表\ref{exp}の実験条件の下、試料ごとに$2\theta$を変えてゆき、回折パターンを測定した。試料はNaCl粉末とNaCl単結晶の2種類である。単結晶試料の寸法を図\ref{size}に示す。
 
 \begin{table}[ht]
  \centering
@@ -294,7 +379,7 @@ X線源から放射された光をNaCl粉末及び単結晶に照射し、光検
   入射スリット     & 1 mm               \\
   出射スリット     & 1 mm               \\
   ソーラースリット & 0.5 deg            \\
-  X線波長          & 1.543\AA、1.392\AA \\\hline
+  X線波長          & 1.543 \AA、1.392 \AA \\\hline
  \end{tabular}
  \label{exp}
 \end{table}
@@ -332,15 +417,15 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
   \caption{NaCl粉末の格子定数.}
   \begin{tabular}{|c|r|c|lll|c|}  \hline
    $2\theta[\mathrm{deg}]$ & \multicolumn{1}{c|}{$2\theta[\mathrm{rad}]$} & $G_{m}$     & h & k & l & a           \\ \hline  \hline
-   27.306                  & 0.468753                                     & 1.891361571 & 1 & 1 & 1 & 5.751031023 \\
-   31.646                  & 0.543256333                                  & 2.185068392 & 2 & 0 & 0 & 5.748103832 \\
-   45.397                  & 0.779315167                                  & 3.093719005 & 2 & 2 & 0 & 5.741478885 \\
-   53.828                  & 0.924047333                                  & 3.63032518  & 3 & 1 & 1 & 5.737338297 \\
-   56.419                  & 0.968526167                                  & 3.791544409 & 2 & 2 & 2 & 5.737650888 \\
-   66.178                  & 1.136055667                                  & 4.381295096 & 4 & 0 & 0 & 5.733464524 \\
-   73.041                  & 1.2538705                                    & 4.777872498 & 3 & 3 & 1 & 5.729304283 \\
-   75.259                  & 1.291946167                                  & 4.902560146 & 4 & 2 & 0 & 5.728642375 \\
-   83.979                  & 1.4416395                                    & 5.375122452 & 4 & 2 & 2 & 5.723700519 \\  \hline
+   27.306 & 0.4766  & 1.9223 & 1 & 1 & 1 & 5.6583\\
+   31.646 & 0.5523  & 2.2206 & 2 & 0 & 0 & 5.6561\\
+   45.397 & 0.7923  & 3.1427 & 2 & 2 & 0 & 5.6521\\
+   53.828 & 0.9395  & 3.6865 & 3 & 1 & 1 & 5.6500\\
+   56.419 & 0.9847  & 3.8497 & 2 & 2 & 2 & 5.6510\\
+   66.178 & 1.1550  & 4.4462 & 4 & 0 & 0 & 5.6498\\
+   73.041 & 1.2748  & 4.8466 & 3 & 3 & 1 & 5.6480\\
+   75.259 & 1.3135  & 4.9724 & 4 & 2 & 0 & 5.6482\\
+   83.979 & 1.4657  & 5.4484 & 4 & 2 & 2 & 5.6468\\\hline
   \end{tabular}
   \label{pow}
  \end{center}
@@ -360,7 +445,7 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
 で計算した。各$\theta$におけるaの平均をとって、格子定数は
 \begin{equation}
  \nonumber
- a=5.736746
+ a=5.6511
  \label{complete}
 \end{equation}
 と求まった。
@@ -386,10 +471,11 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
   \caption{2$\theta$の見積もり.}
   \begin{tabular}{|c|c|c|c|c|}\hline
    $a$        & $\lambda$ & l & $\theta$[rad] & 2$\theta$[deg] \\  \hline  \hline
-   5.73674607 & 1.39      & 2 & 0.244733355   & 28.04437672    \\
-   5.73674607 & 1.54      & 2 & 0.271778272   & 31.14349589    \\
-   5.73674607 & 1.39      & 4 & 0.505900419   & 57.97191777    \\
-   5.73674607 & 1.54      & 4 & 0.566746084   & 64.94431732    \\ \hline
+   5.6511 & 1.39 & 2 & 0.2485 & 28.478\\
+ 5.6511 & 1.54 & 2 & 0.2760& 31.628\\
+ 5.6511 & 1.39 & 4 & 0.5143 & 58.936\\
+ 5.6511 & 1.54 & 4 & 0.5764 & 66.053\\
+ \hline
   \end{tabular}
   \label{gyakusan}
  \end{center}
@@ -403,32 +489,50 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
   \caption{NaCl単結晶の格子定数.}
   \begin{tabular}{|c|c|c|c|ccc|c|c|c|}  \hline
    $2\theta[\mathrm{deg}]$ & $2\theta[\mathrm{rad}]$ & $G_{m\beta}$       & $G_{m\alpha}$      & h & k & l & $a_\beta$          & $a_\alpha$         \\   \hline  \hline
-   28.598                  & 0.490932333             & 2.195818211        & \sout{1.982945083} & 0 & 0 & 2 & 5.71996349         & \sout{6.334013034} \\
-   31.739                  & 0.544852833             & \sout{2.431301177} & 2.195599203        & 0 & 0 & 2 & \sout{5.165958095} & 5.72053405         \\
-   59.173                  & 1.015803167             & 4.394597543        & \sout{3.968564221} & 0 & 0 & 4 & 5.716109326        & \sout{6.329745117} \\
-   66.28                   & 1.137806667             & \sout{4.867753959} & 4.395850588        & 0 & 0 & 4 & \sout{5.160490899} & 5.714479939        \\  \hline
+   28.598 & 0.4991 & 2.2317 & \sout{2.0154} & 0 & 0 & 2 & 5.6279 & \sout{6.232}\\
+ 31.739 & 0.5540 & \sout{2.4709} & 2.2313 & 0 & 0 & 2 & \sout{5.0832} & 5.6289\\
+  59.173 & 1.0328 & 4.4614 & \sout{4.0289} & 0 & 0 & 4 & 5.6305 & \sout{6.2350}\\
+  66.28 & 1.1568 & \sout{4.9398} & 4.4610 & 0 & 0 & 4 & \sout{5.0852} & 5.6311\\
+  \hline
   \end{tabular}
   \label{crystal}
  \end{center}
 \end{table}
 
 %単結晶においては、(001)面に平行な面での回折のみが見られることから、$K_\beta$線による回折も観測できる。そのため、各回折指数hklにおいて、2つの格子定数が計算できる。この逆算から、特性X線$K_\alpha$と$K_\beta$による1次と2次の回折角が得られた。それを図\ref{kakb}に示す。
-逆格子ベクトルの大きさ$G_m$および格子定数$a$は、NaCl粉末と同様の方法で計算した。$\lambda$は表\ref{gyakusan}のように、$K_\alpha$線による回折は1.543 nm、$K_\beta$線による回折は1.392 nm をもちいた。各$\theta$における$a$の平均をとって、格子定数は
+逆格子ベクトルの大きさ$G_m$および格子定数$a$は、NaCl粉末と同様の方法で計算した。$\lambda$は表\ref{gyakusan}のように、$K_\alpha$線による回折は1.543 nm、$K_\beta$線による回折は1.392 nm を用いた。各$\theta$における$a$の平均をとって、格子定数は
 \begin{equation}
  \nonumber
- a=5.717771701
+ a=5.6296
  \label{complete2}
 \end{equation}
 と求まった。
-\if0
+
+図\ref{crystal}ににおける$K_\alpha$線と$K_\beta$線による回折のピークを、直線でつないだものを図\ref{kakb}に示す。
+
  \begin{figure}[htb]
   \centering
   \includegraphics[clip,width=9cm]{kakb.eps}
   \caption{NaCl結晶の回折パターン.}
   \label{kakb}
  \end{figure}
-\fi
 
+片対数グラフにおいて、$K_\alpha$線と$K_\beta$線による回折のどちらも同じ傾きで回折光強度が減衰していることがわかる。このことについて、逆格子空間における回折を図\ref{laue2}を用いて考える。
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[clip,width=9cm]{laue2.eps}
+ \caption{逆格子空間における回折.}
+ \label{laue2}
+\end{figure}
+
+\newpage
+式(\ref{kyoudo})より、回折光の強度は${|f|}^2={|G\bm{(K)}|^2}{|F\bm{(K)}|^2}$に比例する。今回、$(h,k,l)$はすべて偶数であるため、$F\bm{(K)}$は変化しない。図\ref{laue2}から、回折が観測されるのは$\bm{k}_1-\bm{k}_{01}=\bm{G}_{002}$の時及び$\bm{k}_2-\bm{k}_{02}=\bm{G}_{004}$の時である。
+$h=0、k=0$であるため、
+\begin{equation}
+  |G(\bm{K})|^2=\frac{\sin^2(N_c\bm{K}\cdot\bm{a}_3/2)}{\sin^2(\bm{K}\cdot\bm{a}_3/2)}
+\end{equation}
+となる。この時、$|G(\bm{K})|^2$の極大値は$N_c^2$に比例する。また、図\ref{laue2}から、$|\bm{k}_2-\bm{k}_02|=2|\bm{k}_1-\bm{k}_01|$であることがわかる。これは逆格子空間においての、$\theta_2$による回折の逆格子間隔が、$\theta_1$の場合の2倍であることを意味している。この時、回折に携わる結晶の数が$\frac{1}{2}$倍となる。したがって、$\theta_2$の時の回折光強度は$\theta_1$の時の回折光強度の$\frac{1}{4}$となる。これは入射X線の波長に依存しないため、$K_\alpha$線と$K_\beta$線のどちらにおいても同じ傾きで回折光強度が減衰する。
 \newpage
 
 \if0%ここいらない
@@ -457,16 +561,12 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
 \fi
 
 \section{結論}
-かんとか
+Nacl結晶のX線回折パターンを測定し、格子定数を導出した。
 
-\newpage
 %参考文献。\cite{タグ}で参照を示せる。
 \begin{thebibliography}{9}
- \bibitem{powder}株式会社島津 https://www.shimadzu.co.jp/products/opt/guide/07.html 2019/4/12
- \bibitem{CCD} キヤノンサイエンスラボ https://global.canon/ja/technology/s\_labo/light/003/04.html　2019/04/12
- \bibitem{Fibor} 分光計器株式会社 http://www.bunkoukeiki.co.jp/technology.fiber.html 2019/04/12
- \bibitem{varshni}Y.P.Varshni TEMPERATURE DEPENDENCE OF THE ENERGY GAP IN SEMICONDUCTORS
- \bibitem{gapE}キッテル固体物理学入門上第8版　p.119
+ \bibitem{powder}無機材料データベース AtomWork  NaCl (J. Phys. Soc. Jpn.,1983,52,,3506-3513 )
+ \bibitem{CCD} 早稲田 嘉夫、松原 栄一郎 X線構造解析 第3版3刷 p.35-43,p.131-137
 
 
 \end{thebibliography}
