@@ -102,7 +102,7 @@ e^{i\bm{G\cdot R}}=1\leftrightarrow\bm{G\cdot R}=2n\pi
 \bm{G}=h\bm{b_1}+k\bm{b_2}+l\bm{b_3}
 \nonumber
 \end{equation}
-と定義する。$hkl$は回折指数である。$\bm{G}$を逆格子ベクトルと呼び、$(長さ)^-1$の次元を持つ。この時、$\bm{a}_j$と$\bm{b}_k$の間には、
+と定義する。$hkl$は回折指数である。$\bm{G}$を逆格子ベクトルと呼び、$(長さ)^{-1}$の次元を持つ。この時、$\bm{a}_j$と$\bm{b}_k$の間には、
 \begin{equation}
 \bm{a}_j\cdot\bm{b}_k=\delta_{jk}
 \end{equation}
@@ -122,7 +122,7 @@ $l=0$のときの、実格子空間と逆格子空間の簡単な対応を図\re
 \end{figure}
 
 \newpage
-左が実格子空間、右が逆格子空間である。$hkl=210$を見てみると、逆格子ベクトル[210]は、実格子における(210)と垂直である。また、$\bm{G}_{hkl}$方向の結晶面の間隔$d_{hkl}$は
+左が実格子空間、右が逆格子空間である。$hkl=210$を見ると、逆格子ベクトル[210]は、実格子における(210)と垂直である。また、$\bm{G}_{hkl}$方向の結晶面の間隔$d_{hkl}$は
 \begin{equation}
   d_{hkl}=\frac{2\pi}{|\bm{G}_{hkl}|}\times \mathrm{gcd}(h,k,l)
 \end{equation}
@@ -187,7 +187,7 @@ $\bm{k_0}$が逆格子空間の原点を向くベクトルだと考えると、$
 
 \newpage
 \subsection{X線回折}%ここいる？
-X線は電磁波であり、結晶にＸ線を入射したとき、X線は構成原子の原子核と電子によって散乱される。荷電粒子による電磁波の散乱には、散乱波の波長が元の波長から変化しないThomson散乱と、散乱はの波長が元の波長よりも長くなるCompton散乱の2種類がある。Thomson散乱は干渉性散乱、Compton散乱は非干渉性散乱である。結晶による回折においては、干渉性散乱のみを考えればよいので、Thomson散乱のみを考える。Thomson散乱において、散乱断面積は散乱体の質量の自乗に反比例するため、原子によるX線の散乱は電子による散乱に比べ十分小さくなる。ここから、X線は電子によって散乱される、とできる。
+X線は電磁波であり、結晶にＸ線を入射したとき、X線は構成原子の原子核と電子によって散乱される。荷電粒子による電磁波の散乱には、散乱波の波長が元の波長から変化しないThomson散乱と、散乱はの波長が元の波長よりも長くなるCompton散乱の2種類がある。Thomson散乱は干渉性散乱、Compton散乱は非干渉性散乱である。結晶による回折においては、干渉性散乱のみを考えればよいので、Thomson散乱のみを考える。Thomson散乱において、散乱断面積は散乱体の質量の自乗に反比例するため、原子によるX線の散乱は電子による散乱に比べ十分小さくなる。ここから、X線は電子によって散乱されるとみなせる。
 図\ref{sanran}のように、密度$\rho(\bm{r})$で空間分布した電子雲によってX線が散乱される場合を考える。
 \begin{figure}[htb]
  \centering
@@ -227,10 +227,10 @@ X線は電磁波であり、結晶にＸ線を入射したとき、X線は構成
 \end{equation}
 となる。式(\ref{insi})より、$\int\rho_j(\bm{r-R-}\bm{r}_j)e^{i\bm{K\cdot (\bm{r-R-}\bm{r}_j)}}=f_j$とした。結晶全体の散乱の和を$\sum_{\bm{R}}e^{i\bm{K\cdot R}}\equiv G(\bm{K})$、単位格子中の散乱の和を$\sum_jf_je^{i\bm{K}\cdot\bm{r}_j}\equiv F(\bm{K})$と定義する。この時、散乱X線の強度は
 \begin{equation}
-  {|f|}^2={|G\bm{(K)}|^2}{|F|\bm{(K)}|}
+  {|f|}^2={|G\bm{(K)}|^2}{|F\bm{(K)}|^2}
   \label{kyoudo}
 \end{equation}に比例する。
-$\bm{a_1}、\bm{a_2}、\bm{a_3}$方向の格子数を$N_a、N_b、N_c$としたとき、等比級数として計算できる。$|G(\bm{K})|^2$は、
+$\bm{a_1}、\bm{a_2}、\bm{a_3}$方向の格子数を$N_a、N_b、N_c$としたとき、$|G(\bm{K})|^2$は等比級数として計算でき、
 \begin{equation}
   |G(\bm{K})|^2=\frac{\sin^2(N_a\bm{K}\cdot\bm{a}_1/2)}{\sin^2(\bm{K}\cdot\bm{a}_1/2)}\frac{\sin^2(N_b\bm{K}\cdot\bm{a}_2/2)}{\sin^2(\bm{K}\cdot\bm{a}_2/2)}\frac{\sin^2(N_c\bm{K}\cdot\bm{a}_3/2)}{\sin^2(\bm{K}\cdot\bm{a}_3/2)}
 \end{equation}
@@ -238,7 +238,7 @@ $\bm{a_1}、\bm{a_2}、\bm{a_3}$方向の格子数を$N_a、N_b、N_c$とした�
 \begin{equation}
   \bm{K}\cdot\bm{a}_1=2\pi h、\bm{K}\cdot\bm{a}_2=2\pi k、\bm{K}\cdot\bm{a}_3=2\pi l、
 \end{equation}
-のとき有限の値をとり、それ以外の場合はほぼ0である。%余力あれば例を示す
+のとき、つまり$\bm{K}$がLaue条件を満たすとき有限の値をとり、それ以外の場合はほぼ0である。%余力あれば例を示す
 
 $G(\bm{K})$がLaue関数であることから、$F(\bm{K})$について、$\bm{K}=\bm{G}_{hkl}$として計算できる。よって、
 \begin{equation}
@@ -437,7 +437,7 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
  G_m=\frac{4\pi}{\uplambda}\sin\theta
  \label{gyakukousi}
 \end{equation}
-で計算した。$\uplambda$は、今回は$K_\alpha$線の波長である1.543 nmを用いた。格子定数$a$は、$G_{m}$から
+で計算した。$\uplambda$は、今回は$K_\alpha$線の波長である1.543 \AA を用いた。格子定数$a$は、$G_{m}$から
 \begin{equation}
  a=\frac{2\pi}{G_m}\sqrt{h^2+k^2+l^2}
  \label{kousiteisuu}
@@ -455,7 +455,7 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
 
 
 
-図\ref{bulk}に示す。
+NaCl単結晶における回折パターンを図\ref{bulk}に示す。
 
 \begin{figure}[htb]
  \centering
@@ -464,7 +464,7 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
  \label{bulk}
 \end{figure}
 
-横軸はAの回転角、縦軸は回折強度である。グラフから、鋭いピークが複数見られる。$2\theta/\theta$法を用いた単結晶のX線回折測定では、(001)面に平行な面での回折しか観測できないため、$K_\alpha$線及び$K_\beta$線の二つのX線による回折が観測できる。したがって、どのピークが、どのX線による回折を示しているのか判断ができない。$2\theta/\theta$法を用いた単結晶のX線回折測定では、(001)面に平行な面での回折しか観測できないことを利用し、(h,k,l)=(0,0,2n)となるように回折指数をとり、粉末試料で得た格子定数に近い計算結果が得られるよう、$2\theta$を逆算した。その結果を表\ref{gyakusan}に示す。
+横軸はAの回転角、縦軸は回折強度である。グラフから、鋭いピークが複数見られる。$2\theta/\theta$法を用いた単結晶のX線回折測定では、(001)面に平行な面での回折しか観測できないため、$K_\alpha$線及び$K_\beta$線の二つのX線による回折が観測できる。したがって、どのピークが、どのX線による回折を示しているのか判断ができない。$2\theta/\theta$法を用いた単結晶のX線回折測定では、(001)面に平行な面での回折しか観測できないことを利用し、(h,k,l)=(0,0,2n)となるように回折指数をとり、粉末試料で得た格子定数から$2\theta$を逆算した。その結果を表\ref{gyakusan}に示す。
 
 \begin{table}[htbp]
  \begin{center}
@@ -500,7 +500,7 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
 \end{table}
 
 %単結晶においては、(001)面に平行な面での回折のみが見られることから、$K_\beta$線による回折も観測できる。そのため、各回折指数hklにおいて、2つの格子定数が計算できる。この逆算から、特性X線$K_\alpha$と$K_\beta$による1次と2次の回折角が得られた。それを図\ref{kakb}に示す。
-逆格子ベクトルの大きさ$G_m$および格子定数$a$は、NaCl粉末と同様の方法で計算した。$\lambda$は表\ref{gyakusan}のように、$K_\alpha$線による回折は1.543 nm、$K_\beta$線による回折は1.392 nm を用いた。各$\theta$における$a$の平均をとって、格子定数は
+逆格子ベクトルの大きさ$G_m$および格子定数$a$は、NaCl粉末と同様の方法で計算した。$\lambda$は表\ref{gyakusan}のように、$K_\alpha$線による回折は1.543 \AA 、$K_\beta$線による回折は1.392 \AA を用いた。各$\theta$における$a$の平均をとって、格子定数は
 \begin{equation}
  \nonumber
  a=5.6296
@@ -508,6 +508,7 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
 \end{equation}
 と求まった。
 
+\if0
 図\ref{crystal}ににおける$K_\alpha$線と$K_\beta$線による回折のピークを、直線でつないだものを図\ref{kakb}に示す。
 
  \begin{figure}[htb]
@@ -518,8 +519,8 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
  \end{figure}
 
 片対数グラフにおいて、$K_\alpha$線と$K_\beta$線のどちらも、回折角が大きくなると回折強度が小さくなっていることが分かる。
-
-\newpage
+\fi
+また、図\ref{bulk}から、回折角が大きくなると回折強度が小さくなったいることがわかる。
 式(\ref{kyoudo})より、回折光の強度は${|f|}^2={|G\bm{(K)}|^2}{|F\bm{(K)}|^2}$に比例する。今回の回折面は$(0,0,2)$面及び$(0,0,4)$面である。$h=0、k=0$であるため、
 \begin{equation}
   |G(\bm{K})|^2=\frac{\sin^2(N_c\bm{K}\cdot\bm{a}_3/2)}{\sin^2(\bm{K}\cdot\bm{a}_3/2)}
@@ -528,7 +529,7 @@ NaCl粉末における回折パターンを図\ref{powder}に示す。
 \begin{equation}
   F_{hkl}=4(f_{\mathrm{Na}}+f_{\mathrm{Cl}})
 \end{equation}
-となる。この式における原子散乱因子$f_{\mathrm{Na}}+f_{\mathrm{Cl}}$は図\ref{atomic}のように$\frac{\sin\theta}{\lambda}$依存性を持つ\cite{atom}。X線は原子でなく電子によって散乱されるため、X線波長$\lambda$が一定の時、回折角$\theta$が大きくなると、個々の電子による散乱X線の位相差も大きくなる。そのため、原子散乱因子は減少する。また、回折角$\theta$が一定の時、X線波長$\lambda$が短くなると、波長に対しX線の光路差が大きくなるため、原子散乱因子が減少する。回折光の強度は原子散乱因子の自乗に比例するため、図\ref{kakb}において、回折角が大きくなると回折強度が小さくなっている。
+となる。この式における原子散乱因子$f_{\mathrm{Na}}+f_{\mathrm{Cl}}$は図\ref{atomic}のように$\frac{\sin\theta}{\lambda}$依存性を持つ\cite{atom}。X線は原子でなく電子によって散乱されるため、X線波長$\lambda$が一定の時、回折角$\theta$が大きくなると、個々の電子による散乱X線の位相差も大きくなる。そのため、原子散乱因子は減少する。また、回折角$\theta$が一定の時、X線波長$\lambda$が短くなると、波長に対しX線の光路差が大きくなるため、原子散乱因子が減少する。回折光の強度は原子散乱因子の自乗に比例するため、図\ref{bulk}において、回折角が大きくなると回折強度が小さくなっている。
 
 \begin{figure}[htb]
  \centering
@@ -593,8 +594,8 @@ Nacl結晶のX線回折パターンを測定し、格子定数を導出した。
 %参考文献。\cite{タグ}で参照を示せる。
 \begin{thebibliography}{9}
  \bibitem{powder}無機材料データベース AtomWork  NaCl (J. Phys. Soc. Jpn.,1983,52,,3506-3513 )
- \bibitem{atom} 松村源太郎 訳 X線回折用論 第18刷 p.480
- \bibitem{CCD} 早稲田 嘉夫、松原 栄一郎 X線構造解析 第3版3刷 p.35-43,p.131-137
+ \bibitem{atom} B.D.カリティ 著、松村源太郎 訳 X線回折用論 アグネ承風社 第18刷 p.480
+ \bibitem{CCD} 早稲田 嘉夫、松原 栄一郎 著 X線構造解析 内田老鶴圃 第3版3刷 p.35-43,p.131-137
 
 
 \end{thebibliography}
